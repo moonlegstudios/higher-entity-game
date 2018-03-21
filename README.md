@@ -1,4 +1,4 @@
-# higher-entity-game
+# Higher Entity: The Game
 a game about being "The Creator". 
 Author: Moon Leg Studios
 https://www.moonlegstudios.net
