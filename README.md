@@ -1,6 +1,8 @@
 # Higher Entity: The Game
 a game about being "The Creator". 
+
 Author: Moon Leg Studios
+
 https://www.moonlegstudios.net
 
 This game is currently in early development.
