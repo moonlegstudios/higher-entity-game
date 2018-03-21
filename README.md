@@ -9,4 +9,6 @@ https://www.moonlegstudios.net
 
 This game is currently in early development.
 
+<br /><br />
+
 Copyright © 2018 Moon Leg Studios, all rights reserved.
