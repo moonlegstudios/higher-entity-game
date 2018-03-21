@@ -5,6 +5,8 @@ Author: Moon Leg Studios
 
 https://www.moonlegstudios.net
 
+# Details & Notes
+
 This game is currently in early development.
 
 Copyright © 2018 Moon Leg Studios, all rights reserved.
