@@ -9,6 +9,11 @@ https://www.moonlegstudios.net
 
 This game is currently in early development.
 
+Current Version: Indev 1
+
+# Changelog
++ initial release
+
 <br /><br />
 
 Copyright © 2018 Moon Leg Studios, all rights reserved.
