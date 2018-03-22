@@ -16,4 +16,11 @@ public interface UniversalApplicationEngine {
 	DebugError error = new DebugError ();
 	DebugNotification notify = new DebugNotification ();
 	
+	/* loads resources and initializes UAE */
+	public static void initializeUAE () {
+		
+		
+		
+	}
+	
 }
