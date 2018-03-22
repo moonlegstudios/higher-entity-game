@@ -5,7 +5,7 @@ import net.moonlegstudios.higherentity.universalapplicationengine.UniversalAppli
 
 public class DebugHandler implements BootOptions, UniversalApplicationEngine {
 	
-	public void reportDebugMessage (String messageType, String debugMessage) {
+	protected void reportDebugMessage (String messageType, String debugMessage) {
 		
 		/* delivers the debug message to the appropriate console */
 		if (gui) {

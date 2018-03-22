@@ -5,7 +5,7 @@ import net.moonlegstudios.higherentity.universalapplicationengine.UniversalAppli
 public class DebugError implements UniversalApplicationEngine{
 
 	/* error message collection registry */
-	String[][] errorMessageRegistry = {
+	public String[][] errorMessageRegistry = {
 			
 			/* error message guidelines - registry scanner skips index 0*/
 			{"error-id", "error-message", "error-reason-hint", "error-severity"},
@@ -26,7 +26,7 @@ public class DebugError implements UniversalApplicationEngine{
 	}
 	
 	/* checks the errorMessageRegistry[] array for a match in errorId */
-	public void verifyErrorId (String errorId) {
+	private void verifyErrorId (String errorId) {
 		
 		/* loops and scans through errorMessageRegistry[] array */
 		for (int counter = 1; counter < errorMessageRegistry.length; counter ++) {
@@ -44,10 +44,10 @@ public class DebugError implements UniversalApplicationEngine{
 	}
 	
 	/* builds the error message and dispatches the debug report */
-	public void buildErrorMessage (String errorMessage, String errorHint, String errorSeverity) {
+	private void buildErrorMessage (String errorMessage, String errorHint, String errorSeverity) {
 		
 		/* builds the error message and stores it in message String */
-		String message = "[" + errorSeverity + " ERROR] " + errorMessage + " \t HINT: " + errorHint;
+		String message = "[*" + errorSeverity.toUpperCase().trim() + " ERROR] " + errorMessage.trim() + " \t\t HINT: " + errorHint.trim();
 		
 		/* executes reportDebugMessage() method with applicable args */
 		debug.reportDebugMessage("error", message);

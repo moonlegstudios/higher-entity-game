@@ -1,16 +1,21 @@
 package net.moonlegstudios.higherentity.universalapplicationengine.debugmanager;
 
+import net.moonlegstudios.higherentity.HigherEntity;
 import net.moonlegstudios.higherentity.universalapplicationengine.UniversalApplicationEngine;
 
-public class DebugNotification implements UniversalApplicationEngine {
+public class DebugNotification implements UniversalApplicationEngine, HigherEntity {
 
 	/* notification message collection registry */
-	String[][] notificationMessageRegistry = {
+	public String[][] notificationMessageRegistry = {
 			
 			/* notification message guidelines - registry scanner skips index 0 */
 			{"notification-id", "notification-message"},
 			
 			{"enabled-no-gui-mode", "NO-GUI Mode has been enabled, all program output will be displayed inside the console IDE - some features will be disabled"},
+			{"init-uae", "Universal Application engine is now initializing..."},
+			{"init-mge", "Membran GUI engine is now initializing..."},
+			{"init-ege", "Essence Game Engine is now intializing..."},
+			{"program-launching", "Launching Program\n\n" + appTitle + "\n" + appDescription + "\n" + appVersion + " - " + updateTitle + "\n" + appAuthor + "\n" + copyright + "\n---"},
 			
 	};
 	
@@ -23,7 +28,7 @@ public class DebugNotification implements UniversalApplicationEngine {
 	}
 	
 	/* checks the notificationMessageRegsitry[] array for a match in notificationId */
-	public void verifyNotificationId (String notificationId) {
+	private void verifyNotificationId (String notificationId) {
 		
 		/* loops and scans through the notificationMessageRegsitry[] */
 		for (int counter = 1; counter < notificationMessageRegistry.length; counter ++) {
@@ -42,10 +47,10 @@ public class DebugNotification implements UniversalApplicationEngine {
 	
 	
 	/* builds the notification message and dispatches the debug report */
-	public void buildNotificationMessage (String notificationMessage) {
+	private void buildNotificationMessage (String notificationMessage) {
 		
 		/* builds the error message and stores it in message String */
-		String message = "[NOTIFICATION] " + notificationMessage;
+		String message = "[NOTIFICATION] " + notificationMessage.trim();
 		
 		/* executes reportDebugMessage() method with applicable args */
 		debug.reportDebugMessage("notification", message);

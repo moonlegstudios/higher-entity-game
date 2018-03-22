@@ -6,7 +6,7 @@ public interface HigherEntity {
 	
 	/* Title and Description */
 	appTitle = "Higher Entity",
-	appDecription = "A game about being 'The Creator'",
+	appDescription = "A game about being 'The Creator'",
 	
 	/* Version and Update Title */
 	updateTitle = "Building the foundations",
@@ -16,6 +16,11 @@ public interface HigherEntity {
 	appAuthor = "Moon Leg Studios",
 	appDeveloper = "Moon Leg Studios",
 	developers[] = {"Admin Chris", "Admin Jake"};
+	
+	/* Legal Credits */
+	String
+	
+	copyright = "Copyright © 2018 " + appAuthor + ", all rights reserved";
 	
 	/* unlocalized program attributes */
 	String
