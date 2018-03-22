@@ -7,7 +7,9 @@ public interface BootOptions {
 	
 	enableApplicationEngine = true,
 	enableGameEngine = true,
-	enableGuiEngine = false;
+	enableGuiEngine = false,
+	
+	gui = false;
 	
 	/* User Permission Variables */
 	public boolean

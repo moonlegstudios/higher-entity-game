@@ -15,47 +15,44 @@ public class StartGame extends Application implements BootOptions, EssenceGameEn
 	Scene scene;
 	Parent root;
 	
-	public void start (Stage stage) {
-		
-		
-		
-	}
+	public void start (Stage stage) {}
 	
 	public static void main (String[] args) {
 		
 		/* loads universal application engine first */
 		if (enableApplicationEngine) {
 			
-			UniversalApplicationEngine.initializeUAE();
+			ua_engine.initUAE();
 			
 			/* loads essence game engine second */
 			if (enableGameEngine) {
 				
-				EssenceGameEngine.initializeEGE();
+				eg_engine.initEGE();
 				
 				/* loads membrane gui engine last */
 				if (enableGuiEngine) {
 					
-					MembraneGuiEngine.initializeMGE();
+					mg_engine.initMGE();
 				
 				/* enableGuiEngine = false */
 				} else {
 					
-					/* TODO: Add error message - MGE did not initialize, launching in console mode */
+					error.reportError("init-mge-failed");
+					notify.reportNotification("enabled-no-gui-mode");
 					
 				}
 				
 			/* enableGameEngine = false */
 			} else {
 				
-				/* TODO: Add error message - EGE did not initialize, cannot launch program - reason: enableGameEngine = false - severity: critical */
+				error.reportError("init-ege-failed");
 				
 			}
 			
 		/* enableApplicationEngine = false */
 		} else {
 			
-			/* TODO: Add error message - UAE did not initialize, cannot launch program - reason: enableApplicationEngine = false - severity: critical */
+			error.reportError("init-ege-failed");
 			
 		}
 		

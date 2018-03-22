@@ -9,18 +9,12 @@ public interface UniversalApplicationEngine {
 
 	/* accessible classes within same package */
 	ThreadManager manager_threads = new ThreadManager ();
+	InitializeUAE ua_engine = new InitializeUAE ();
 	
-	/* accessible classes within sub-packages */
+	/* accessible classes within sub-packages *
 	/* debug manager package */
 	DebugHandler debug = new DebugHandler ();
 	DebugError error = new DebugError ();
 	DebugNotification notify = new DebugNotification ();
-	
-	/* loads resources and initializes UAE */
-	public static void initializeUAE () {
-		
-		
-		
-	}
 	
 }
